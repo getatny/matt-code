@@ -32,19 +32,10 @@ jobs:
       run: | 
         npm run clean
         npm run build
-        
-    - name: generate git info
-      run: |
-        cd ./public
-        git config --global user.name "Matthew Wang"
-        git config --global user.email "wangmaozhu@foxmail.com"
-        git init
-        git add .
-        git commit -m "update: update static files"
 
     - name: publish build artifact to github
       uses: dfm/force-push-branch-action@v1
       with:
         github-token: ${{ secrets.MATT_CODE }}
-        path: .
+        path: ./public
         target-branch: main
