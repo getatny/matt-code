@@ -37,5 +37,5 @@ jobs:
       uses: dfm/force-push-branch-action@v1
       with:
         github-token: ${{ secrets.MATT_CODE }}
-        path: ./public
+        path: ./public/*
         target-branch: main
