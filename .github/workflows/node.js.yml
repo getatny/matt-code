@@ -14,7 +14,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [ 14.x ]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -30,8 +30,8 @@ jobs:
       
     - name: build hexo
       run: | 
-        npm clean
-        npm build
+        npm run clean
+        npm run build
         
     - name: generate git info
       run: |
