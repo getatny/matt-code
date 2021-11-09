@@ -36,8 +36,8 @@ jobs:
     - name: generate git info
       run: |
         cd ./public
-        git config user.name "Matthew Wang"
-        git config user.email "wangmaozhu@foxmail.com"
+        git config --global user.name "Matthew Wang"
+        git config --global user.email "wangmaozhu@foxmail.com"
         git init
         git add .
         git commit -m "update: update static files"
